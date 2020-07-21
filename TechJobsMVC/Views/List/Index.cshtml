@@ -12,10 +12,13 @@
     </tr>
     <tr>
         @{
-            //TODO #2: Complete the View Jobs By Category Table
+            //TODO #2: Complete the View Jobs By Category Table // Completed            
         }
-
-        <td></td> @* Feel free to remove or modify this element if necessary. *@
+        <td>
+            @*<a href="someUrl">Click!</a>*@
+           <a asp-controller="List" asp-action="Jobs" asp-route-column="all">All</a>
+            @*What does the "@" do in razor syntax? It interprets what follows as C# code.*@
+        </td> @* Feel free to remove or modify this element if necessary. *@
         @foreach (var category in ViewBag.tableChoices)
         {
             <td>
@@ -30,4 +33,4 @@
             </td>
         }
     </tr>
-        </table>
+</table>
